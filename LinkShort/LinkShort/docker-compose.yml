@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: gunicorn --bind :8000 --workers 2 LinkShort.wsgi
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    networks:
+      - mynetwork  # Connect the service to the defined network
+
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: ianv  # Replace with your database name
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: HmqGhw1NfrYpKxs  # Replace with your database password
+    ports:
+      - "5432:5432"
+    networks:
+      - mynetwork  # Connect the service to the defined network
+
+networks:
+  mynetwork:  # Define the network
+    driver: bridge

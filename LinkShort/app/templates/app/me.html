@@ -1,0 +1,258 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Ian Volkov - Personal Website</title>
+  <link rel="stylesheet" href="{% static 'app/style.css' %}">
+</head>
+<body>
+  <header>
+    <h1 class="header-title"><span class="rainbow-text">Ian Volkov</span></h1>
+    <h2 style="text-align:left;">
+      <a href="https://github.com/ianvol">
+        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="Your GitHub Logo" width="100" height="100" />
+      </a>
+      <span style="float:right;">
+        <a href="https://twitter.com/ianvolkov?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @ianvolkov on Twitter!</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </span>
+    </h2>
+  </header>
+
+  <div class="container">
+    <h2>Welcome to my personal website!</h2>
+    <p>Here you can learn more about me and my work, and peruse some of my projects.</p>
+    <div class="row">
+      <div class="column">
+        <h3>Personal</h3>
+        <ul>
+          <li>Rocket enthusiast</li>
+          <li>Slightly too interested in hurricanes</li>
+          <li>Long standing Chelsea FC sufferer</li>
+        </ul>
+      </div>
+      <div class="column">
+        <h3>Professional</h3>
+        <ul>
+          <li>Website Maintainer for Elmbridge Liberal Democrats</li>
+          <li>Web Development</li>
+          <li>Data Science</li>
+          <li>Machine Learning</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+	  <h2> Please feel free to read through my CV! </h2>
+	    <div class="container">
+	<div class = "section">
+    <p align="center">
+      <strong>Ian Volkov</strong>
+    </p>
+    <p align="center">
+      British & Canadian Citizen – ian@ianvolkov.com
+    </p>
+      <a href="https://www.linkedin.com/in/ian-volkov/">
+          <img src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Logo.svg.original.svg" /></a>
+	</div>
+
+    <div class="section">
+      <p class="section-title">PERSONAL STATEMENT</p>
+      <p>
+        I am a highly motivated and sociable second-year Computer Science student with a proven academic track record. Committed to exceeding targets and helping others achieve their goals, I am seeking a summer internship to gain practical experience and expand my skillset in a professional setting.
+      </p>
+      <p>
+        With my results-oriented mindset, drive for success, and strong organizational skills, I am confident in my ability to contribute to any team. I am eager to dive into real-world challenges, apply my knowledge, and continuously improve as a computer scientist.
+      </p>
+    </div>
+
+    <div class="section">
+      <p class="section-title">EDUCATION</p>
+      <table class="info-table">
+        <tr>
+          <td width="463">
+            <strong>King’s College London</strong>
+          </td>
+          <td width="138">
+            <strong>London, UK</strong>
+          </td>
+          <td width="138" align="right">
+            09/2022 – 09/2026
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <strong>MSci Computer Science</strong> (Concentrations: Intelligence &amp; Data Science)
+          </td>
+        </tr>
+      </table>
+      <ul>
+        <li>Current Predicted: <strong>77% (First Honours)</strong></li>
+        <li><strong>Courses:</strong> Programming Practice & Applications, Introduction to Software Engineering, Database Systems, Data Structures</li>
+      </ul>
+
+      <table class="info-table">
+        <tr>
+          <td width="300">
+            <strong>Tiffin School</strong>
+          </td>
+          <td width="301">
+            <strong>London, UK</strong>
+          </td>
+          <td width="301" align="right">
+            09/2020 – 06/2022
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <strong>A Levels: A*AAA</strong>
+          </td>
+        </tr>
+      </table>
+      <ul>
+        <li>Grade: <strong>A* Maths</strong></li>
+        <li>Grade: <strong>3x A Grades</strong> in <strong>Further Maths, Chemistry, Physics</strong></li>
+      </ul>
+    </div>
+
+<div class="section">
+  <p class="section-title">WORK EXPERIENCE</p>
+  <table class="info-table">
+    <tr>
+      <td width="300">
+        <strong>Places Leisure</strong>
+      </td>
+      <td width="301">
+        <strong>Surrey, UK</strong>
+      </td>
+      <td width="301" align="right">
+        10/2021 – present
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <em>Senior Assistant, Food & Beverage, Bar</em>
+      </td>
+    </tr>
+  </table>
+  <ul>
+    <li>Customer-facing serving hundreds of customers per week.</li>
+    <li>Stock checking before and during peak time events.</li>
+    <li>Ensure workplace health and safety regulations.</li>
+    <li>Handling day-to-day transactions and inflows.</li>
+    <li>Qualified first-aider.</li>
+  </ul>
+
+  <!-- New Entry -->
+  <table class="info-table">
+    <tr>
+      <td width="300">
+        <strong>Elmbridge Liberal Democrats</strong>
+      </td>
+      <td width="301">
+        <strong>Surrey, UK</strong>
+      </td>
+      <td width="301" align="right">
+        07/2023 – present
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <em>Website Maintainer - Volunteer</em>
+      </td>
+    </tr>
+  </table>
+  <ul>
+    <li>Responsible for updating the website with local party news</li>
+    <li>Re-designing the website based on needs at the time</li>
+  </ul>
+</div>
+
+
+    <div class="section">
+      <p class="section-title">PROJECT & LEADERSHIP EXPERIENCE</p>
+      <table class="info-table">
+        <tr>
+          <td width="300">
+            <strong>King’s AI Team</strong>
+          </td>
+          <td width="301">
+            <strong>London, UK</strong>
+          </td>
+          <td width="301" align="right">
+            05/2023 – present
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <em>Group Leader</em>
+          </td>
+        </tr>
+      </table>
+      <ul>
+        <li>Research member for King's AI Team, looking into NeRF algorithms and their applications.</li>
+        <li>Creating a dog-like robot, to eventually have autonomy.</li>
+      </ul>
+
+      <table class="info-table">
+        <tr>
+          <td width="300">
+            <strong>UK Youth Parliament Member</strong>
+          </td>
+          <td width="301">
+            <strong>London/Nottingham/Leeds, UK</strong>
+          </td>
+          <td width="301" align="right">
+            05/2017 – 09/2021
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <em>Volunteer</em>
+          </td>
+        </tr>
+      </table>
+      <ul>
+        <li>Collaborated with the former Leader of the House of Commons, Jacob Rees-Mogg, to increase parliament involvement in the Youth Parliament.</li>
+        <li>Spearheaded drafting and proposing curriculum for life to UKYP Manifesto.</li>
+        <li>Responsible for Surrey County Council and presenting the Transport youth cabinet brief.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <p class="section-title">OTHER PROJECTS & SKILLS</p>
+      <p>
+        Played a key role in the development and maintenance of <a href="https://thestarshipcrew.com/">https://thestarshipcrew.com</a>, making use of HTML and CSS. Also contributed to a related Discord bot project, utilizing Python and the discord.py library.
+      </p>
+      <p>
+        Completed the 'Python for Everybody' course on Coursera, a comprehensive Python program provided by Dr. Chuck Severance at the University of Michigan.
+      </p>
+      <ul>
+        <li><strong>SKILLS:</strong> Java, Python, HTML/CSS, Git, SQL (intermediate)</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class = "container">
+	<h3> More coming soon... </h3>
+  </div>
+  
+  <div class="loading-container">
+    <div class="loading-circle"></div>
+  </div>
+
+  <script>
+    // Hide the loading animation after 1.5 seconds
+    window.addEventListener("load", function () {
+      setTimeout(function () {
+        document.querySelector(".loading-container").style.display = "none";
+      }, 1500);
+    });
+  </script>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>{{ title }}</h2>
+<div class="row">
+    <div class="col-md-8">
+        <section id="userLinks">
+            {% if user_links %}
+                <h4>Your Shortened URLs:</h4>
+                <ul>
+                    {% for link in user_links %}
+                        <li><a href="{{ link.short_url }}">{{ link.short_url }}</a> - {{ link.long_url }}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>You haven't shortened any URLs yet.</p>
+            {% endif %}
+        </section>
+    </div>
+    <div class="col-md-4">
+        <!-- Add any additional content for the sidebar here if needed -->
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<!-- Add any additional scripts here if needed -->
+{% endblock %}
