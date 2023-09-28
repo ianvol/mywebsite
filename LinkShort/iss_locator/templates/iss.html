@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ISS Tracker with Map</title>
+</head>
+<body>
+    <h1>ISS Tracker</h1>
+    <div id="iss-info">
+        <p>Latest ISS Position:</p>
+        <ul>
+            <li>Longitude: <span id="longitude"></span></li>
+            <li>Latitude: <span id="latitude"></span></li>
+        </ul>
+        <div id="map-container">
+            <img id="map-image" alt="ISS Position Map" />
+        </div>
+    </div>
+    <script>
+        async function fetchISSData() {
+            const MAPBOX = "pk.eyJ1IjoiaWFudm9sIiwiYSI6ImNrc2M3bGRrYjBlMHkydm51MW91MWUwcWkifQ.-gkpqdTkOEBdafFlkquGGw";
+            const apiUrl = "https://api.open-notify.org/iss-now.json";
+
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+
+                const longitude = parseFloat(data.iss_position.longitude);
+                const latitude = parseFloat(data.iss_position.latitude);
+
+                const mapUrl = `https://api.mapbox.com/styles/v1/mapbox/outdoors-v11/static/pin-l-circle+ffffff(${longitude},${latitude})/${longitude},${latitude},1,0/600x500@2x?access_token=${MAPBOX}`;
+
+                // Update the page elements
+                document.getElementById('longitude').textContent = longitude.toFixed(4);
+                document.getElementById('latitude').textContent = latitude.toFixed(4);
+                document.getElementById('map-image').src = mapUrl;
+            } catch (error) {
+                console.error("Error fetching ISS data:", error);
+            }
+        }
+
+        // Call the function when the page loads
+        window.onload = fetchISSData;
+        setInterval(fetchISSData, 10000);
+    </script>
+</body>
+</html>
+{% endblock %}

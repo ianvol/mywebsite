@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My GitHub Projects</title>
+    <link rel="stylesheet" href="{% static 'project_flex.css' %}">
+</head>
+<body>
+    <header>
+        <h1>My GitHub Projects</h1>
+    </header>
+
+    <section class="projects">
+        <div class="project">
+            <h2>Project 1</h2>
+            <p>
+                A piece of software that will take NASA's picture of the day and set it as your wallpaper. Windows only.
+                This will soon be expanded potentially to other APIs that can scrape wallpapers from various sources.
+            </p>
+            <a href="https://github.com/ianvol/nasapodwallpaper">GitHub Repository</a>
+        </div>
+
+        <div class="project">
+            <h2>Project 2</h2>
+            <p>This is a piece of code to test the implementation of KD Trees and converting rays to 3D points in NeRF. Part of my wider work on King's AI Team.</p>
+            <a href="https://github.com/ianvol/nerfkdtrees">GitHub Repository</a>
+        </div>
+
+        <div class="project">
+            <h2>Project 3</h2>
+            <p>This is a WIP to try and be able to create a NeRF dataset via testing the use of human pose libraries on inanimate objects</p>
+            <a href="https://github.com/ianvol/generatenerfdataset">GitHub Repository</a>
+        </div>
+
+        <div class="project">
+            <h2>Project 4</h2>
+            <p>This is a wider collaborative repository designed to provide robust analytical capabilities for cameras operating in 3D spaces</p>
+            <a href="https://github.com/ianvol/GeomKit">Github Repository</a>
+        </div>
+
+        <div class="project">
+            <h2>Project 5</h2>
+            <p>Coming soon. This will involve software for a robot, that will eventually contain capabilities of Projects 2-4.</p>
+            <a>Github Repository</a>
+        </div>
+
+    </section>
+
+    <section class="contact">
+        <h2>Contact</h2>
+        <p>You can reach me at ian@ianvolkov.com.</p>
+    </section>
+</body>
+</html>
+{% endblock %}
+
